@@ -1,0 +1,18 @@
+{
+    "header": "About Me",
+    "job_title": "Full-Stack Developer",
+    "job_description": "web developer who specializes in developing user interface using React/Next JS and skills to work with back-end using Flask to build full-stack websites.",
+    "CV_button": "Download CV",
+    "personal_info": "Personal Information",
+    "name_title": "Name",
+    "age_title": "Age",
+    "nationality_title": "Nationality",
+    "nationality": "Yemen",
+    "major_title": "Majoring",
+    "major": "Software Engineering",
+    "links": "Links",
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "linkedIn": "LinkedIn",
+    "telegram": "Telegram"
+}

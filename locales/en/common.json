@@ -1,0 +1,12 @@
+{
+    "greetings": "hello world",
+    "home_link": "home",
+    "about_link": "about",
+    "skills_link": "skills",
+    "projects_link": "projects",
+    "contact_link": "contact",
+    "name": "Abdulghani Al-Juhi",
+    "success": "Message Was Sent Succcssfully",
+    "failed": "Error, Please Try Again Later",
+    "unvaild_email": "Please Enter A Vaild Email Address"
+}
