@@ -29,24 +29,23 @@ export default function Footer() {
 
         <div className='flex flex-col w-full items-center'>
           <div className='flex w-full max-w-[400px] justify-between mb-3 child:m-2'>
+            <a href='https://twitter.com/abdulghani_18' target="_blank" rel="noreferrer">
+              <div className='social_medial_logo'>
+                <FiTwitter strokeWidth={1} size={24} />
+              </div>
+            </a>
 
-          <a href='https://twitter.com/abdulghani_18' target="_blank" rel="noreferrer">
-            <div className='p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-500 hover:text-black dark:hover:text-white'>
-              <FiTwitter strokeWidth={1} size={24} />
-            </div>
-          </a>
+            <a href="mailto:gfyjd@hotmail.com">
+              <div className='social_medial_logo'>
+                <FiMail size={24}  strokeWidth={1} />
+              </div>
+            </a>
 
-          <a href="mailto:gfyjd@hotmail.com">
-          <div className='p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-gray-500 hover:text-black dark:hover:text-white'>
-            <FiMail size={24}  strokeWidth={1} />
-          </div>
-          </a>
-         
-          <a href='https://github.com/abdulghanialjuhi/next-movie-app' target="_blank" rel="noreferrer" >
-            <div className=' p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-500 hover:text-black dark:hover:text-white'>
-              <FiGithub strokeWidth={1} size={24} />
-            </div>
-          </a>
+            <a href='https://github.com/abdulghanialjuhi' target="_blank" rel="noreferrer" >
+              <div className='social_medial_logo'>
+                <FiGithub strokeWidth={1} size={24} />
+              </div>
+            </a>
           </div>
 
 

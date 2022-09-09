@@ -6,8 +6,7 @@ import { useRouter } from 'next/router'
 export default function About() {
 
     const { t } = useTranslation()
-
-    const router = useRouter()
+    const { locale } = useRouter()
 
     const getAge = (dateString) => {
         const ageInMilliseconds = new Date() - new Date(dateString);
@@ -15,7 +14,9 @@ export default function About() {
     }
 
     return (
-        <div className="w-full h-full flex flex-col pt-6">
+        <div className='min-h-[680px]'>
+
+        <div className="w-full h-full md:max-h-[550px] flex flex-col pt-6">
             <h1 className='text-[2.6rem]'> {t('about:header')}  </h1>
 
             <div className="flex flex-col md:flex-row h-full justify-between w-full pt-14">
@@ -32,7 +33,7 @@ export default function About() {
 
                     <div className='flex w-full justify-end md:mt-auto mt-7'>
                         <a 
-                        href={router.locale === 'en' ? "/resumes/cv.pdf" : "/resumes/cv-ar.pdf"} download='abdulghani'
+                        href={locale === 'en' ? "/resumes/cv.pdf" : "/resumes/cv-ar.pdf"} download='abdulghani'
                         className='btn-primary'> 
                             {t('about:CV_button')} 
                         </a>
@@ -54,14 +55,27 @@ export default function About() {
                         <h3 className='text-2xl'> {t('about:links')} </h3>
 
                         <ul className='list-disc px-7 mt-4 child:pt-2'>
-                            <li> {t('about:twitter')}: <a href='https://twitter.com/abdulghani_18' target="_blank" rel="noreferrer" className='a_link'> @abdulghani_18 </a> </li>
-                            <li> {t('about:github')}: <a href='https://github.com/abdulghanialjuhi' target="_blank" rel="noreferrer" className='a_link'> @abdulghanialjuhi </a> </li>
-                            <li> {t('about:linkedIn')}: <a href='https://www.linkedin.com/in/abdulghani-aljuhi-6257ba216' target="_blank" rel="noreferrer" className='a_link'> @abdulghani-aljuhi </a> </li>
-                            <li> {t('about:telegram')}: <a href='https://t.me/abdulghani18' target="_blank" rel="noreferrer" className='a_link'> @abdulghani18 </a> </li>
+                            <li> {t('about:twitter')}: 
+                                <a href='https://twitter.com/abdulghani_18' target="_blank" rel="noreferrer" className='a_link'> @abdulghani_18 </a> 
+                            </li>
+
+                            <li> {t('about:email')}: 
+                                 <a href="mailto:gfyjd@hotmail.com" className='a_link'> gfyjd@hotmail.com </a>
+                            </li>
+
+                            <li> {t('about:linkedIn')}: 
+                                <a href='https://www.linkedin.com/in/abdulghani-aljuhi' target="_blank" rel="noreferrer" className='a_link'> @abdulghani-aljuhi </a> 
+                            </li>
+
+                            <li> {t('about:telegram')}: 
+                                <a href='https://t.me/abdulghani18' target="_blank" rel="noreferrer" className='a_link'> @abdulghani18 </a> 
+                            </li>
                         </ul>
                     </div>
                 </section>
             </div>
         </div>
+        </div>
+
     )
 }

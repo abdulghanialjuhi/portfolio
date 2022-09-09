@@ -1,4 +1,3 @@
-import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
 import { projectsData, otherProjects } from '../data/projects'
 import { useState } from 'react'
@@ -10,7 +9,7 @@ export default function Projects() {
     const { t } = useTranslation()
 
     const [showOther, setShowOther] = useState(false)
-    const router = useRouter()
+    const { locale } = useRouter()
 
     return (
         <div className="w-full h-full flex flex-col">
@@ -22,13 +21,13 @@ export default function Projects() {
                 ))}
             </div>
 
-            <div className={`border border-gray-200 dark:border-gray-700 p-2 mt-8`}>
+            <div className={`border border-gray-200 dark:border-gray-900 p-2 mt-8`}>
 
                 <div className='overflow-hidden'>
                 
                     <button className='flex w-full h-8 items-center cursor-pointer' onClick={() => setShowOther(!showOther)}>
-                        <div className={`${showOther ? router.locale === 'en' ? 'rotate-90' : 'rotate-[-90deg]' : ''} transition-transform`}> 
-                            {router.locale === 'en' ? <IoMdArrowDropright size={20} /> : <IoMdArrowDropleft size={20} />}
+                        <div className={`${showOther ? locale === 'en' ? 'rotate-90' : 'rotate-[-90deg]' : ''} transition-transform`}> 
+                            {locale === 'en' ? <IoMdArrowDropright size={20} /> : <IoMdArrowDropleft size={20} />}
                         </div>
                         {t('home:other_projects')}
                     </button>

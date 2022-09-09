@@ -44,6 +44,11 @@ body {
   .btn-primary { 
     @apply px-4 py-2 bg-primaryBlue rounded hover:ring-2 transition-all text-white;
   }
+
+  .social_medial_logo{ 
+    @apply p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-500 hover:text-black dark:hover:text-white;
+  }
+
 }
 
 ::selection {
@@ -53,22 +58,3 @@ body {
 * {
   box-sizing: border-box;
 }
-
-
-
-
-/* a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    min-width: 360px;
-    color-scheme: black;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */

@@ -8,5 +8,7 @@
     "name": "Abdulghani Al-Juhi",
     "success": "Message Was Sent Succcssfully",
     "failed": "Error, Please Try Again Later",
-    "unvaild_email": "Please Enter A Vaild Email Address"
+    "unvaild_email": "Please Enter A Vaild Email Address",
+    "not_found": "Page Not Found",
+    "go_home": "Go To Home"
 }
