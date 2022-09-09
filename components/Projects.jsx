@@ -60,7 +60,7 @@ const Card = ({ img, path, name, description, githubLink, tools }) => {
                 
                 <a href={path} target="_blank" className='md:w-[45%] h-full md:min-h-[274px] overflow-hidden border border-gray-700 rounded flex justify-center'>
                     <div className='hover:brightness-75'>
-                        <img src={img} alt={name} className='md:min-w-[437px] md:h-[274px] aspect-[16/10] md:aspect-auto bg-fixed' />
+                        <img src={img} alt={name} className='md:min-w-[437px] md:h-[274px] aspect-[16/10] md:aspect-auto bg-fixed' loading='lazy' />
                     </div>
                 </a>
 

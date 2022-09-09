@@ -10,7 +10,7 @@ import useTranslation from 'next-translate/useTranslation'
 export default function Header() {
 
   const [mount, setMount] = useState(false)
-  const [sideBar, setSideBar] = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false)
   const [linksAnimate, setLinksAnimate] = useState(false)
 
   const { resolvedTheme, setTheme } = useTheme()
@@ -20,19 +20,19 @@ export default function Header() {
   useEffect(() => setMount(true), [])
 
   useEffect(() => {
-    if (!sideBar) {
+    if (!mobileMenu) {
       setTimeout(() => setLinksAnimate(false), 500)
     } else {
       setLinksAnimate(true)
     }
-  }, [sideBar])
+  }, [mobileMenu])
   
   const toggleMenu = () => {
-    if (sideBar) {
-      setSideBar(false)
+    if (mobileMenu) {
+      setMobileMenu(false)
       document.body.style.overflow = ''
     } else {
-      setSideBar(true)
+      setMobileMenu(true)
       document.body.style.overflow = 'hidden'
     }
   }
@@ -46,7 +46,7 @@ export default function Header() {
   return (
     <div className='w-full'>
       <nav 
-      className={`${sideBar ? 'h-screen bg-white dark:bg-black left-0 ease-out duration-500 transition-height' : 'h-[5rem] ease-out duration-500 transition-all bg-gray-100 dark:bg-darkColor'} fixed w-full left-0 right-0 flex justify-between max-w-[1090px] mx-auto px-6 pt-2 overflow-hidden md:overflow-visible z-50`}>
+      className={`${mobileMenu ? 'h-screen bg-white dark:bg-black left-0 ease-out duration-500 transition-height' : 'h-[5rem] ease-out duration-500 transition-all bg-gray-100 dark:bg-darkColor'} fixed w-full left-0 right-0 flex justify-between max-w-[1090px] mx-auto px-6 pt-2 overflow-hidden md:overflow-visible z-50`}>
 
         <div className='flex flex-col md:flex-row items-center min-h-[5rem] md:justify-between w-full md:w-auto'>
 
@@ -54,7 +54,7 @@ export default function Header() {
           <div className='w-full flex min-h-[5rem] ml-[-0.60rem] items-center justify-between md:hidden'>
 
           <div className='flex p-2 rounded active:scale-75' onClick={toggleMenu}>
-            {sideBar ? <MdClose size={20} /> :<GiHamburgerMenu size={20} />}
+            {mobileMenu ? <MdClose size={20} /> :<GiHamburgerMenu size={20} />}
           </div>
 
           {mount && (
@@ -67,7 +67,7 @@ export default function Header() {
           {mount && (
             <div className={`flex flex-col md:flex-row w-full md:w-auto justify-evenly ml-[-0.45rem] mb-8 md:mb-0`}>
             {linkArray.map((link, index) => (
-              <NavLink key={link} name={link} index={index} linksAnimate={linksAnimate} setSideBar={setSideBar} />
+              <NavLink key={link} name={link} index={index} linksAnimate={linksAnimate} setMobileMenu={setMobileMenu} />
             ))}
             </div>
           )}
@@ -95,7 +95,7 @@ export default function Header() {
   )
 }
 
-const NavLink = ({ name, index, linksAnimate, setSideBar }) => {
+const NavLink = ({ name, index, linksAnimate, setMobileMenu }) => {
 
   // to access paths in arabic and english languages
   const paths = ['/', '/about', '/#skills', '/#projects', '/#contact']
@@ -106,7 +106,7 @@ const NavLink = ({ name, index, linksAnimate, setSideBar }) => {
   const isActive = router.asPath === path;
 
   const handleOnClick = () => {
-    setSideBar(false)
+    setMobileMenu(false)
     document.body.style.overflow = ''
   }
 

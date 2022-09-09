@@ -7,18 +7,18 @@ export default function LanguageMenu() {
 
     const router = useRouter()
 
-    const handleLanguage = (e) => {
-        if (e.target.value === router.locale) return;
-
-        document.cookie = `NEXT_LOCALE=${e.target.value}; max-age=31536000; path=/`
-        router.push(router.asPath, undefined, { locale: e.target.value })
-        setTimeout(() => window.location.reload(), 200)
-    }
-
     const languages = [
         {value: 'en', text: 'English'},
         {value: 'ar', text: 'العربية'}
     ]
+
+    const handleLanguage = (e) => {
+        if (e.target.value === router.locale) return;
+
+        document.cookie = `NEXT_LOCALE=${e.target.value}; max-age=31536000; path=/`
+        router.replace(router.asPath, undefined, { locale: e.target.value })
+        setTimeout(() => window.location.reload(), 300)
+    }
 
     return (
         <Menu as="div" className="relative w-full md:w-auto inline-block text-left">
