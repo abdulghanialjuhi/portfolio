@@ -16,9 +16,7 @@ export default function Home() {
       <div className='w-full max-w-[600px] mx-auto min-h-[710px] flex flex-col pt-12 md:pt-20 items-center'>
 
         <div className='h-[152px] w-[152px] bg-white rounded-[50%] overflow-hidden mb-4'>
-          {/* <div className='w-full h-full relative'> */}
             <Image src="/personal1.jpg" alt="me" width='152px' height='152px' />
-          {/* </div> */}
         </div>
 
         <span className='uppercase text-[12px] md:text-sm text-gray-600 dark:text-gray-300'> {t('home:span_title')} </span>
@@ -35,7 +33,7 @@ export default function Home() {
           </div>
 
           <div className='flex w-full justify-end mt-8'>
-            <button onClick={() => window.location = '#contact'} className='btn-primary'> {t('home:contact_me')} </button>
+            <a href='#contact' className='btn-primary'> {t('home:contact_me')} </a>
           </div>  
 
           <div className='flex w-full justify-between mt-10'>
