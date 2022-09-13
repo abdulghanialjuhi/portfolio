@@ -44,9 +44,9 @@ export default function Header() {
   const linkArray = [t('common:home_link'), t('common:about_link'), t('common:skills_link'), t('common:projects_link'), t('common:contact_link')]
 
   return (
-    <div className='w-full'>
+    <div className='fixed w-full left-0 right-0 z-50'>
       <nav 
-      className={`${mobileMenu ? 'h-screen bg-white dark:bg-black left-0 ease-out duration-500 transition-height' : 'h-[5rem] ease-out duration-500 transition-all bg-gray-100 dark:bg-darkColor'} fixed w-full left-0 right-0 flex justify-between max-w-[1090px] mx-auto px-6 pt-2 overflow-hidden md:overflow-visible z-50`}>
+      className={`${mobileMenu ? 'h-screen bg-white dark:bg-black left-0 ease-out duration-500 transition-height' : 'h-[5rem] ease-out duration-500 transition-all bg-gray-100 dark:bg-darkColor'} flex justify-between max-w-[1090px] mx-auto px-6 pt-2 overflow-hidden md:overflow-visible `}>
 
         <div className='flex flex-col md:flex-row items-center min-h-[5rem] md:justify-between w-full md:w-auto'>
 
