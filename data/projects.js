@@ -1,7 +1,7 @@
 export const projectsData = [
     {
         img: '/projects/movie.png', 
-        path: 'https://next-movie-app-abdulghanialjuhi.vercel.app', 
+        path: 'https://next-movie-app-abdulghani18.vercel.app', 
         name: 'Movie DB', 
         description: 'movie_description',
         githubLink: 'https://github.com/abdulghanialjuhi/next-movie-app',
